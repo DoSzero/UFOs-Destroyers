@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_start"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.MenuActivity">
+
+    <ImageButton
+        android:id="@+id/btn_exit"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/cancel"
+        android:contentDescription="@string/exit" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:ignore="RelativeOverlap">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:background="@drawable/logo"/>
+
+        <Button
+            android:id="@+id/btn_start"
+            style="@android:style/Widget.Button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_gradient"
+            android:fontFamily="@font/original_surfer"
+            android:padding="6dp"
+            android:text="@string/play_game"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+        <Button
+            android:id="@+id/btn_about"
+            style="@android:style/Widget.Button"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/button_gradient"
+            android:fontFamily="@font/original_surfer"
+            android:padding="6dp"
+            android:text="Узнать больше"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:backgroundTint="@null" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp">
+
+            <ImageButton
+                android:id="@+id/btn_music"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/music_note"
+                android:contentDescription="@string/music" />
+
+            <ImageButton
+                android:id="@+id/btn_sound"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_toEndOf="@id/btn_music"
+                android:background="@drawable/volume_up"
+                android:contentDescription="@string/sound" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

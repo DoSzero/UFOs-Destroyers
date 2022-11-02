@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_instructions"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <ImageButton
+        android:id="@+id/btn_back_instructions"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:background="@drawable/arrow_back"
+        android:contentDescription="@string/back_button" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/original_surfer"
+        android:gravity="center"
+        android:padding="25dp"
+        android:text="@string/game_instructions"
+        android:textAlignment="textStart"
+        android:textColor="#CDDC39"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        tools:context=".view.InfoActivity"
+        tools:ignore="RtlCompat" />
+
+</LinearLayout>

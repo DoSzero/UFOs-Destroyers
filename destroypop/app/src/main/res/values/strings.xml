@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">UFOs Destroyers</string>
+
+    <string name="level_label">Уровень:&#160;</string>
+    <string name="score_label">Счет: &#160;</string>
+
+    <string name="play_game">Играть</string>
+    <string name="start_game">Начать</string>
+
+    <string name="finish_level">Вы закончили уровень&#160;</string>
+    <string name="level_start">Начать</string>
+    <string name="game_instructions">Ваша задача состоит в том, чтобы уничтожить как можно больше Инопланетян , прежде чем они попадут на землю.</string>
+
+    <string name="high_score" translatable="false">0</string>
+    <string name="high_score_label">Оценка: &#160;</string>
+
+    <string name="game_over">Игра закончена!</string>
+
+
+    <string name="level">0</string>
+    <string name="game_life">Жизни</string>
+    <string name="back_button">Назад</string>
+    <string name="sound" >Звук</string>
+    <string name="music">Музыка</string>
+    <string name="exit">Выход</string>
+    <string name="assertion_message">Ожидается 1 параметр для текущего уровня</string>
+
+</resources>
