@@ -81,11 +81,7 @@ open class GameplayActivity : AppCompatActivity(), BalloonListener {
         if (viewTreeObserver.isAlive) {
             viewTreeObserver.addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
                 override fun onGlobalLayout() {
-//                    binding.activityMain
                     viewTreeObserver.removeOnGlobalLayoutListener(this)
-                    //mScreenWidth = mContentView.width
-                    //mScreenHeight = mContentView.height
-
                     mScreenWidth = mContentView!!.width
                     mScreenHeight = mContentView!!.height
                 }
@@ -96,14 +92,12 @@ open class GameplayActivity : AppCompatActivity(), BalloonListener {
                 view: View? -> setToFullScreen()
         })
 
-        //mScoreDisplay = findViewById(R.id.score_display)
-        //mLevelDisplay = findViewById(R.id.level_display)
+
         mHeartImages.add(findViewById(R.id.heart1))
         mHeartImages.add(findViewById(R.id.heart2))
         mHeartImages.add(findViewById(R.id.heart3))
         mHeartImages.add(findViewById(R.id.heart4))
         mHeartImages.add(findViewById(R.id.heart5))
-        //mGoButton = findViewById(R.id.go_button)
         updateDisplay()
 
         mSoundHelper = SoundHelper(this)
@@ -270,23 +264,18 @@ open class GameplayActivity : AppCompatActivity(), BalloonListener {
             mContentView!!.removeView(balloon)
             balloon.setPopped(true)
         }
+        
         mBalloons.clear()
         mPlaying = false
         mGameStopped = true
-
+        
         binding.goButton.setText(R.string.start_game)
         binding.goButton.visibility =View.VISIBLE
-
-        //mGoButton!!.setText(R.string.start_game)
-        //mGoButton!!.visibility = View.VISIBLE
     }
 
     private fun updateDisplay() {
         binding.scoreDisplay.text = mScore.toString()
         binding.levelDisplay.text = mLevel.toString()
-
-        //mScoreDisplay!!.text = mScore.toString()
-        //mLevelDisplay!!.text = mLevel.toString()
     }
 
      private fun launchBalloon(x: Int) {
@@ -295,7 +284,6 @@ open class GameplayActivity : AppCompatActivity(), BalloonListener {
         balloon.x = x.toFloat()
         balloon.y = (mScreenHeight + balloon.height).toFloat()
 
-        //binding.c
         mContentView!!.addView(balloon)
         balloon.releaseBalloon(
             mScreenHeight,
@@ -312,7 +300,6 @@ open class GameplayActivity : AppCompatActivity(), BalloonListener {
 
     /**
      * This class is responsible for calculating speed of balloons and x axis position of the balloon
-     * @see AsyncTask
      */
 
 //    // выполнение в одном потоке исполнителей
